@@ -22,4 +22,5 @@ require_once locate_template('functions/image.php'); // 画像関連の関数た
 require_once locate_template('functions/json.php'); // JSON関連
 require_once locate_template('functions/widget.php'); // ウィジェット関連
 require_once locate_template('functions/login.php'); // ログイン画面
+require_once locate_template('functions/customize.php'); // テーマカスタマイザー
 ?>

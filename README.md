@@ -112,6 +112,8 @@ Tailwindの`@apply`を活用すれば短いCSSで済みます。
 
 ## 作るうえでの参考
 
+### Theme customizer
+https://maddisondesigns.com/2017/05/the-wordpress-customizer-a-developers-guide-part-1/
 ### PostCSS + tailwind CSS with WordPress
 https://viarami.com/programming/tailwind-css-wordpress-theme/
 
