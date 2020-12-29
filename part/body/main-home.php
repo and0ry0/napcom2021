@@ -37,7 +37,7 @@ if (is_author()) {
 <main class="max-w-screen mx-auto 1200:w-1200" data-title="<?php bloginfo('name'); ?>">
 
     <?php if (is_archive()) : ?>
-        <div class="bg-gray-900 py-6 mb-6"
+        <div class="rounded-xl shadow-xl bg-gray-900 py-12 mb-6"
     <?php
         if (is_single()) {
             
