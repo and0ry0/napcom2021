@@ -1,9 +1,10 @@
 <header class="w-screen overflow-hidden z-10 mb-8">
   <div class="mx-auto w-screen 650:w-650 960:w-960 relative pt-6 h-full flex justify-center items-center sm:justify-between">
     <a class="mr-15" href="<?php echo home_url(); ?>" alt="トップページへ">
-      <svg xmlns="//www.w3.org/2000/svg" width="200" viewBox="0 0 655.7 65">
+      <svg style="fill: <?php echo get_theme_mod('logocolor') ?>" xmlns="//www.w3.org/2000/svg" width="200" viewBox="0 0 655.7 65">
         <?php get_template_part('part/svg/logo', 'wide') ?>
       </svg>
+      <div class="mt-1 text-gray-500"><?php echo get_theme_mod( 'underlogo_text' ); ?></div>
     </a>
 
     <ul class="hidden ml-auto sm:flex">
