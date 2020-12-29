@@ -1,0 +1,21 @@
+.impt {
+    @import './style/import/content.css';
+
+    /* もし広告をロードしたら */
+    ins {
+        @apply mx-auto my-6;
+    }
+}
+
+@media print,
+screen and (max-width: $contentWidth + 20px) {
+    .impt {
+        img {
+            @apply max-w-full h-auto;
+        }
+
+        iframe {
+            @apply max-w-full h-auto;
+        }
+    }
+}

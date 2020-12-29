@@ -1,0 +1,20 @@
+
+/*---------------------
+全フォント変更
+--------------------------------- */
+body, a, kbd {
+    
+}
+::selection {
+
+    /* テキスト選択反転色 */
+    background: #424242;
+    color: #fff;
+}
+::-moz-selection {
+    background: #424242;
+    color: #fff;
+}
+a:visited {
+    color: #000;
+}

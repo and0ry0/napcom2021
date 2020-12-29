@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/* purgecss start ignore */
+@import './import/variable.css';
+@import './import/font.css';
+@import './import/story.css';
+@import './import/plugin.css';
+/* purgecss end ignore */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
