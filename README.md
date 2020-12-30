@@ -3,6 +3,11 @@
 A simple theme for gaming media.
 Designed by [@sasigume](https://github.com/sasigume)
 
+
+## カスタマイザー
+
+**「外観」👉「カスタマイズ」でロゴなどを変更できます。**
+
 ## テーマ側で定義している機能について
 
 ショートコード機能は消したので、[Shortcoder](https://wordpress.org/plugins/shortcoder/)で管理してください。

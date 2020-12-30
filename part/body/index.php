@@ -1,5 +1,17 @@
 <body class="bg-white">
 
+  <svg style="display:none;" version="1.1" xmlns="//www.w3.org/2000/svg">
+
+    <?php
+    if (get_theme_mod('select_logo') == null) {
+      // 先にnullの場合を定義しないと表示されないっぽい
+      get_template_part('part/svg/logo', 'dotcom');
+    } else {
+      get_template_part('part/svg/logo', get_theme_mod('select_logo'));
+    }
+    ?>
+  </svg>
+
   <!-- Google Tag Manager -->
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WPT2KT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script>
@@ -33,11 +45,11 @@
   get_template_part('part/body/header'); ?>
 
   <?php
-  
+
   // mainタグは分岐
-  if(is_home()){
+  if (is_home()) {
     get_template_part('part/body/main', 'home');
-  } elseif (is_singular() && !is_page(Array('games', 'about'))) {
+  } elseif (is_singular() && !is_page(array('games', 'about'))) {
     get_template_part('part/body/main', 'singular');
   } elseif (is_404()) {
     get_template_part('part/body/main', '404');

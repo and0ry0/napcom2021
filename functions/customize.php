@@ -1,4 +1,11 @@
 <?php
+function sanitize_select_logo($input) {
+  if($input == null ) {
+    return 'dotcom';
+  } else {
+    return $input;
+  }
+}
 function themeslug_customize_register($wp_customize)
 {
   $wp_customize->add_section(
@@ -7,6 +14,32 @@ function themeslug_customize_register($wp_customize)
       'title' => __('ロゴ設定'),
       'priority' => '1',
       'description' => esc_html__('ロゴの設定をします'),
+    )
+  );
+
+  $wp_customize->add_setting(
+    'select_logo',
+    array(
+      'default' => 'dotcom',
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_select_logo'
+    )
+  );
+
+  $wp_customize->add_control(
+    'select_logo',
+    array(
+      'label' => __('ロゴ'),
+      'description' => esc_html__('ロゴを選んでください。'),
+      'default' => 'dotcom',
+      'section' => 'logo_section',
+      'priority' => 1,
+      'type' => 'radio',
+      'choices' => array(
+        'dotcom' => __( 'NAPOAN.COM' ),
+        'nomaikura' => __( 'ナポアンのマイクラ' ),
+        'manoikura' => __( 'ナポアンマのイクラ' ),
+     )
     )
   );
 
@@ -26,7 +59,7 @@ function themeslug_customize_register($wp_customize)
       'description' => esc_html__('ロゴの色。'),
       'default' => '#000000',
       'section' => 'logo_section',
-      'priority' => 5,
+      'priority' => 2,
       'type' => 'color',
     )
   );
@@ -46,7 +79,7 @@ function themeslug_customize_register($wp_customize)
       'label' => __('ロゴ下のテキスト'),
       'description' => esc_html__('ロゴの下に出ます'),
       'section' => 'logo_section',
-      'priority' => 10, // Optional. Order priority to load the control. Default: 10
+      'priority' => 3, // Optional. Order priority to load the control. Default: 10
       'type' => 'text', // Can be either text, email, url, number, hidden, or date
       'capability' => 'edit_theme_options', // Optional. Default: 'edit_theme_options'
       'input_attrs' => array( // Optional.
