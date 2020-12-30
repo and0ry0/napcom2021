@@ -16,11 +16,14 @@ function sanitize_inputsvg($input) {
 }
 function themeslug_customize_register($wp_customize)
 {
+
+  // ------------------------
+
   $wp_customize->add_section(
     'logo_section',
     array(
       'title' => __('ロゴ設定'),
-      'priority' => '1',
+      'priority' => '100',
       'description' => esc_html__('ロゴの設定をします'),
     )
   );
@@ -181,7 +184,7 @@ function themeslug_customize_register($wp_customize)
     'list_section',
     array(
       'title' => __('記事一覧設定'),
-      'priority' => '2',
+      'priority' => '100',
       'description' => esc_html__('記事一覧の設定をします'),
     )
   );

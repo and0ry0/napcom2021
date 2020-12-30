@@ -1,4 +1,11 @@
 <?php
+
+if ( function_exists('register_nav_menus') ) {
+    register_nav_menus( array(
+            'header_menu' => 'ヘッダーメニュー',
+    ) );
+}
+
 // ウィジェット有効化
 if ( function_exists('register_sidebar') ) {
     register_sidebar(array(
@@ -10,4 +17,3 @@ if ( function_exists('register_sidebar') ) {
         'after_title' => '</h2>'
     ));
 }
-?>
