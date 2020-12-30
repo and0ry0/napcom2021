@@ -19,7 +19,6 @@ require_once locate_template('functions/control.php'); // 全体的な機能の�
 require_once locate_template('functions/editor.php'); // 編集画面・記事内容関連
 require_once locate_template('functions/etcs.php'); // 便利な関数たち
 require_once locate_template('functions/image.php'); // 画像関連の関数たち
-require_once locate_template('functions/json.php'); // JSON関連
 require_once locate_template('functions/widget.php'); // ウィジェット関連
 require_once locate_template('functions/login.php'); // ログイン画面
 require_once locate_template('functions/customize.php'); // テーマカスタマイザー
