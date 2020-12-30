@@ -1,18 +1,22 @@
 /* ページ送り */
 .wp-pagenavi {
-  @apply text-center pt-12 pb-6 mb-16;
+    @apply text-center;
 
-  span, a {
-      @apply inline-block p-3 font-bold no-underline bg-white mt-4 mr-4 shadow-lg transition-all duration-300;
+    span,
+    a {
+        @apply rounded-xl inline-block p-3 font-bold no-underline bg-white mt-4 mr-4 shadow-lg transition-all duration-300;
 
-      &:visited {
-          @apply text-black;
-      }
-      &.current {
-          @apply bg-napoan text-white;
-      }
-  }
-  a:hover {
-      @apply bg-napoan text-white;
-  }
+    }
+
+    a.visited {
+        @apply text-black;
+    }
+
+    span.current {
+        @apply bg-napoan text-white;
+    }
+
+    a:hover {
+        @apply bg-napoan text-white;
+    }
 }

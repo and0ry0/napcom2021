@@ -10,3 +10,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+b {
+  @apply font-bold;
+}
+
+input {
+  @apply m-1 p-1 rounded-sm border border-gray-300;
+}

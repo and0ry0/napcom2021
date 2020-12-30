@@ -1,4 +1,4 @@
-<body class="bg-white">
+<body class="flex flex-col min-h-screen bg-white"><!-- フッター下の余白をなくす -->
 
   <svg style="display:none;" version="1.1" xmlns="//www.w3.org/2000/svg">
     <defs>
@@ -51,31 +51,21 @@
   //メニューは共通
   get_template_part('part/body/header'); ?>
 
+<main class="flex-grow mx-auto px-4 650:px-0 w-screen 650:w-650 1000:w-960">
   <?php
 
   // mainタグは分岐
-  if (is_home()) {
+  if (is_home() || is_archive()) {
     get_template_part('part/body/main', 'home');
-  } elseif (is_singular() && !is_page(array('games', 'about'))) {
-    get_template_part('part/body/main', 'singular');
   } elseif (is_404()) {
     get_template_part('part/body/main', '404');
-  } elseif (is_page('games')) {
-    get_template_part('part/body/main', 'games');
-  } elseif (is_page('about')) {
-    get_template_part('part/body/main', 'about');
   } else {
-    get_template_part('part/body/main', 'home');
+    get_template_part('part/body/main', 'singular');
   };
   ?>
+</main>
 
   <footer class="w-auto relative z-10 mt-16 py-8 px-6 text-center bg-gray-200">
-    <?php
-    if (!is_home() && function_exists('yoast_breadcrumb')) {
-      yoast_breadcrumb('<p id="c-breadcrumbs">', '</p>');
-    }
-    ?>
-
     <p class="mb-4"><small>記事の文章または画像を引用・転載する際や、アンテナサイトに掲載する場合は該当ページへのリンクをお願いします。当サイトはMojang ABおよびMicrosoft社とは無関係であり、記事を利用したことによる如何なる損害も管理人は責任を負いません。</small>
     </p>
     <small>Copyright 2020 <?php bloginfo('name'); ?> <a href="/privacy-policy/">(プライバシーポリシー)</a> 　|　 <a href="https://portal.eximradar.jp">Powered by EXR-Network</a></small>
