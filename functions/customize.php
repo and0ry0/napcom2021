@@ -6,6 +6,14 @@ function sanitize_select_logo($input) {
     return $input;
   }
 }
+
+function sanitize_inputsvg($input) {
+  if($input == true ) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
 function themeslug_customize_register($wp_customize)
 {
   $wp_customize->add_section(
@@ -87,6 +95,83 @@ function themeslug_customize_register($wp_customize)
         'style' => 'border: 1px solid rebeccapurple',
         'placeholder' => __('HTMLはダメ！'),
       ),
+    )
+  );
+
+  $wp_customize->add_setting(
+    'usemysvg',
+    array( 
+      'transport' => 'refresh',
+      'sanitize_callback' => 'sanitize_inputsvg'
+    )
+  );
+
+  $wp_customize->add_control(
+    'usemysvg',
+    array(
+      'default' => '0',
+      'label' => __('自分のSVGを使う'),
+      'description' => esc_html__('チェックすると以下の欄に入れたSVGが使われます。'),
+      'section' => 'logo_section',
+      'priority' => 4,
+      'type' => 'checkbox',
+    )
+  );
+
+  $wp_customize->add_setting(
+    'mysvg',
+    array(
+      'default' => '',
+      'transport' => 'refresh',
+    )
+  );
+
+  $wp_customize->add_control(
+    'mysvg',
+    array(
+      'label' => __('自分のSVG'),
+      'description' => esc_html__('<svg></svg>タグの中身だけ使ってください。'),
+      'section' => 'logo_section',
+      'priority' => 5,
+      'type' => 'textarea',
+    )
+  );
+
+  $wp_customize->add_setting(
+    'mysvg_width',
+    array(
+      'default' => '200',
+      'transport' => 'refresh',
+    )
+  );
+
+  $wp_customize->add_control(
+    'mysvg_width',
+    array(
+      'label' => __('自分のSVGのwidth'),
+      'description' => esc_html__('svgタグで使われます。'),
+      'section' => 'logo_section',
+      'priority' => 6,
+      'type' => 'text',
+    )
+  );
+
+  $wp_customize->add_setting(
+    'mysvg_viewBox',
+    array(
+      'default' => '0 0 565 65',
+      'transport' => 'refresh',
+    )
+  );
+
+  $wp_customize->add_control(
+    'mysvg_viewBox',
+    array(
+      'label' => __('自分のSVGのviewBox'),
+      'description' => esc_html__('svgタグで使われます。'),
+      'section' => 'logo_section',
+      'priority' => 6,
+      'type' => 'text',
     )
   );
 

@@ -1,15 +1,22 @@
 <body class="bg-white">
 
   <svg style="display:none;" version="1.1" xmlns="//www.w3.org/2000/svg">
-
-    <?php
-    if (get_theme_mod('select_logo') == null) {
-      // 先にnullの場合を定義しないと表示されないっぽい
-      get_template_part('part/svg/logo', 'dotcom');
-    } else {
-      get_template_part('part/svg/logo', get_theme_mod('select_logo'));
-    }
-    ?>
+    <defs>
+      <symbol id="use_logo">
+        <?php
+        if (get_theme_mod('usemysvg') == true) {
+          echo get_theme_mod('mysvg');
+        } else {
+          if (get_theme_mod('select_logo') == null) {
+            // 先にnullの場合を定義しないと表示されないっぽい
+            get_template_part('part/svg/logo', 'dotcom');
+          } else {
+            get_template_part('part/svg/logo', get_theme_mod('select_logo'));
+          }
+        }
+        ?>
+      </symbol>
+    </defs>
   </svg>
 
   <!-- Google Tag Manager -->
