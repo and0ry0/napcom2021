@@ -1,4 +1,4 @@
-<body>
+<body class="bg-white">
 
   <!-- Google Tag Manager -->
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WPT2KT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
