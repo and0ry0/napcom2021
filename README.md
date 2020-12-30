@@ -62,8 +62,8 @@ define( 'WP_ENVIRONMENT_TYPE', 'development' );
 
 | `WP_ENVIRONMENT_TYPE` | ロードされるCSS | purgeされてる? |
 | ------ | ------ | ------ |
-| `development` \|\| `local` | `output/style.css` | :white_check_mark: |
-| `production` | `output/style-dev.css` | :white_medium_square: |
+| `production | `output/style.css` | :white_check_mark: |
+| `development` \|\| `local` | `output/style-dev.css` | :white_medium_square: |
 
 開発環境でなら、CSSを書き出しなおさずに初めて使うclassも試すことができます。
 
