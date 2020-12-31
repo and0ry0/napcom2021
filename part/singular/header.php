@@ -3,7 +3,7 @@
     <?php
     if (get_the_tag_list()) {
       echo get_the_tag_list('<dl class="mb-6 flex flex-wrap">
-      <dd class="inline-block p-2 m-1 bg-gray-100 hover:bg-blue-200 border-1 font-bold border-gray-500 rounded-xl shadow-xl">', '</dd><dd class="c-singleTags__tag">', '</dd></dl>');
+      <dd class="inline-block p-2 m-1 bg-gray-100 hover:bg-blue-200 border-1 font-bold border-gray-500 rounded-xl shadow-xl">', '</dd><dd class="inline-block p-2 m-1 bg-gray-100 hover:bg-blue-200 border-1 font-bold border-gray-500 rounded-xl shadow-xl">', '</dd></dl>');
     }
     ?>
 
