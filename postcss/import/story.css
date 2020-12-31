@@ -1,5 +1,5 @@
 .impt {
-    @import './style/import/content.css';
+    @import './postcss/import/content.css';
 
     /* もし広告をロードしたら */
     ins {

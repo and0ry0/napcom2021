@@ -29,11 +29,12 @@
       <?php
       wp_nav_menu(array(
         // widget.php参照
-        'theme_location'              => "header_menu",
-        'menu_class'        => "flex",
-        'container_class'   => "flex",
-        'before'            => "<li class=\"ml-3\">",
-        'after' => "</li>",
+        'theme_location'    => "header_menu",
+        'items_wrap' => '%3$s',
+        'menu_class'        => "",
+        'container_class'   => "flex flex-wrap list-none",
+        'before'            => "<div class=\"ml-3\">",
+        'after' => "</div>",
         'link_before' => "<a class=\"inline-block bg-gray-100 transition duradion-300 p-2 rounded-md hover:bg-gray-200\">",
         'link_after' => "</a>"
       )); ?>

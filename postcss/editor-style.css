@@ -15,7 +15,7 @@
 
 .wp-editor {
     font-family: 'Noto Sans JP'!important;
-    @import './style/import/content.css';
+    @import './postcss/import/content.css';
     width: 650px;
     margin: 0 auto;
     color: #080000;
