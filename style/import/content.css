@@ -11,84 +11,46 @@ video {
 }
 
 .youtube-box {
-    position   : relative;
-    width      : 100%;
+    @apply relative w-full mb-2;
     padding-top: 56.25%;
-    margin     : 0 0 0.6rem;
 
     iframe {
-        position: absolute;
-        top     : 0;
-        right   : 0;
-        width   : 100% !important;
-        height  : 100% !important;
+        @apply absolute top-0 right-0 w-full h-full;
     }
 }
 
 a {
-    text-decoration: underline;
-    color          : #0066FF;
+    @apply underline text-blue-600;
 
     &:hover {
-        color: #3F99FF;
+        @apply text-blue-500;
     }
 
     &:visited {
-        color: #723c94;
+        @apply text-purple-700;
     }
 
     &.back-link {
-        float: left;
+        @apply float-left;
     }
 
     &.next-link {
-        float: right;
+        @apply float-right;
     }
 
     &.back-link,
-    &.next-link {
-        display        : block;
-        padding        : 3px;
-        margin         : 2px 2px 2px 10px;
-        background     : #fff;
-        border         : solid 1px #777;
-        text-decoration: none !important;
-        font-size      : 14px;
-        font-weight    : bold;
-        color          : #000;
-        transition     : all .4s;
-        border-radius  : 5px;
-
-        &:hover {
-            border-color: #000000 !important;
-            color       : #000000 !important;
-            box-shadow  : 0px 0px 5px rgba(100, 100, 100, 1);
-            transition  : all .4s;
-        }
+    &.next-link,
+    &.napo-art-link {
+        @apply block p-1 m-2 ml-4 bg-white border-gray-500 no-underline font-bold text-black rounded-lg;
     }
 
     &.napo-art-link {
-        display      : block;
-        padding      : 8px;
-        border       : solid 2px #2687e8;
-        background   : #2687e8;
-        font-size    : 1.1em;
-        color        : #fff !important;
-        border-radius: 5px;
-        box-shadow   : 0px 5px 0px #0072D4;
-        text-align   : center;
-        transition   : all .3s;
-
-        &:hover {
-            background: #fff;
-            color     : #2687e8 !important;
-        }
+        @apply border-napoan text-center
     }
 }
 
 p {
-    line-height: 1.7;
-    margin     : 0px 0px 1.4em;
+    @apply leading-relaxed mb-4;
 }
 
 h1,
@@ -97,59 +59,48 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: bold;
-    line-height: 1.3;
-    margin     : 0.7em 0;
+    @apply mx-1 rounded-r-xl font-bold leading-loose my-5 p-3 pl-5 border-gray-400 relative;
+
+}
+
+h1:before,
+h2:before,
+h3:before,
+h4:before,
+h5:before,
+h6:before {
+    content   : "";
+    @apply block w-2 h-full left-0 top-0 absolute border-l-2 border-gray-500;
 }
 
 h1 {
-    font-size    : 1.7em;
-    border-left  : 5px solid #2687e8;
-    box-shadow   : 0px 0px 6px rgba(100, 100, 100, 0.5);
-    padding      : 5px 0px 6px 5px;
-    border-radius: 0px 3px 3px 0px;
-    position     : relative;
+    box-shadow: 0px 0px 6px rgba(100, 100, 100, 0.5);
+    @apply text-2xl py-2 pl-3;
+
+    &:before {
+        @apply border-napoan;
+    }
 }
 
 h2 {
-    font-size    : 1.4em;
-    border       : solid 2px #BDBDBD;
-    padding      : 6px 5px 6px 12px;
-    border-radius: 0px 5px 5px 0px;
     box-shadow   : 0px 3px 0px #848484;
-    position     : relative;
-
+    @apply text-xl;
     &:before {
-        content   : "";
-        display   : block;
-        position  : absolute;
-        width     : 4px;
-        height    : 100%;
-        background: #444;
-        left      : -2px;
-        top       : 0px;
+        @apply border-gray-700;
     }
 }
 
 h3 {
-    font-size    : 1.25em;
-    border       : solid 1px #AAA;
-    padding      : 6px 5px 6px 12px !important;
-    border-radius: 5px;
     box-shadow   : 0px 2px 0px #888;
+    @apply text-lg;
 }
 
 h4 {
-    font-size    : 1.17em;
-    border-bottom: 2px solid #ccc;
-    border-left  : 2px solid #ccc;
-    padding      : 0px 0px 4px 6px;
+    @apply text-lg;
 }
 
 h5 {
-    font-size    : 1.13em;
-    border-bottom: 1px solid #ccc;
-    padding      : 0px 0px 4px 0px;
+    
 }
 
 #toc_container {
@@ -182,6 +133,7 @@ h5 {
 
 dl {
     @apply mt-12 mb-8 px-6 pb-4 border border-gray-400 shadow-lg;
+    box-shadow: 0px 3px 0px rgba(1,1,1,0.1);
 
     &.nimu_stepchart {
         @apply border-none shadow-none;
@@ -329,384 +281,6 @@ table {
     &.blue {
         @apply bg-blue-700;
     }
-}
-
-.sprite {
-    image-rendering: pixelated;
-    @apply inline-block align-middle h-4 w-4 bg-no-repeat;
-}
-
-.inv-sprite {
-    background-image: url(https://napoan.com/wp-content/uploads/2018/04/InvSprite-1.png);
-    @apply w-8 h-8;
-}
-
-.item-sprite {
-    background-image: url(https://napoan.com/wp-content/uploads/2018/11/ItemCSS.png);
-}
-
-.entity-sprite {
-    background-image: url(https://napoan.com/wp-content/uploads/2018/04/EntityCSS.png);
-
-    &.entity-item {
-        background-position: -16px -0px
-    }
-
-    &.entity-xp_orb {
-        background-position: -160px -64px
-    }
-
-    &.entity-area_effect_cloud {
-        background-position: -144px -36px;
-    }
-
-    &.entity-leash_knot {
-        background-position: -144px -112px
-    }
-
-    &.entity-painting {
-        background-position: -64px -80px
-    }
-
-    &.entity-item_frame {
-        background-position: -112px -112px
-    }
-
-    &.entity-evocation_fangs {
-        background-position: -128px -128px
-    }
-
-    &.entity-armor_stand {
-        background-position: -0px -208px
-    }
-
-    &.entity-ender_crystal {
-        background-position: -48px -64px
-    }
-
-    &.entity-egg {
-        background-position: -96px -48px
-    }
-
-    &.entity-arrow {
-        background-position: -64px -48px
-    }
-
-    &.entity-snowball {
-        background-position: -80px -48px
-    }
-
-    &.entity-fireball {
-        background-position: -112px -48px
-    }
-
-    &.entity-small_fireball {
-        background-position: -112px -48px
-    }
-
-    &.entity-ender_pearl {
-        background-position: -144px -48px
-    }
-
-    &.entity-eye_of_ender_signal {
-        background-position: -160px -48px
-    }
-
-    &.entity-potion {
-        background-position: -160px -112px
-    }
-
-    &.entity-xp_bottle {
-        background-position: -112px -64px
-    }
-
-    &.entity-wither_skull {
-        background-position: -176px -64px
-    }
-
-    &.entity-fireworks_rocket {
-        background-position: 0px -160px
-    }
-
-    &.entity-spectral_arrow {
-        background-position: -64px -48px
-    }
-
-    &.entity-shulker_bullet {
-        background-position: -96px -96px
-    }
-
-    &.entity-dragon_fireball {
-        background-position: -112px -96px
-    }
-
-    &.entity-llama_spit {
-        background-position: -160px -128px
-    }
-
-    &.entity-tnt {
-        background-position: -0px -64px
-    }
-
-    &.entity-commandblock_minecart {
-        background-position: -80px -96px
-    }
-
-    &.entity-boat {
-        background-position: -128px -32px
-    }
-
-    &.entity-minecart {
-        background-position: -144px -32px
-    }
-
-    &.entity-chest_minecart {
-        background-position: -160px -32px
-    }
-
-    &.entity-furnace_minecart {
-        background-position: -176px -32px
-    }
-
-    &.entity-tnt_minecart {
-        background-position: -128px -80px
-    }
-
-    &.entity-hopper_minecart {
-        background-position: -144px -80px
-    }
-
-    &.entity-spawner_minecart {
-        background-position: -160px -80px
-    }
-
-    &.entity-evocation_illager {
-        background-position: -80px -128px
-    }
-
-    &.entity-vex {
-        background-position: -96px -128px
-    }
-
-    &.entity-vindication_illager {
-        background-position: -112px -128px
-    }
-
-    &.entity-creeper {
-        background-position: -16px -16px
-    }
-
-    &.entity-skeleton {
-        background-position: -144px -0px
-    }
-
-    &.entity-wither_skeleton {
-        background-position: -64px -64px
-    }
-
-    &.entity-stray {
-        background-position: -16px -128px
-    }
-
-    &.entity-spider {
-        background-position: -160px -0px
-    }
-
-    &.entity-giant {
-        background-position: -128px -0px
-    }
-
-    &.entity-zombie {
-        background-position: -128px -0px
-    }
-
-    &.entity-zombie_villager {
-        background-position: -16px -80px
-    }
-
-    &.entity-husk {
-        background-position: -32px -128px
-    }
-
-    &.entity-slime {
-        background-position: -32px -16px
-    }
-
-    &.entity-ghast {
-        background-position: -48px -16px
-    }
-
-    &.entity-zombie_pigman {
-        background-position: -64px -16px
-    }
-
-    &.entity-enderman {
-        background-position: -128px -16px
-    }
-
-    &.entity-cave_spider {
-        background-position: -0px -16px
-    }
-
-    &.entity-silverfish {
-        background-position: -144px -16px
-    }
-
-    &.entity-blaze {
-        background-position: -112px -32px
-    }
-
-    &.entity-magma_cube {
-        background-position: -176px -16px
-    }
-
-    &.entity-ender_dragon {
-        background-position: -64px -32px
-    }
-
-    &.entity-wither {
-        background-position: -0px -80px
-    }
-
-    &.entity-witch {
-        background-position: -80px -64px
-    }
-
-    &.entity-endermite {
-        background-position: -16px -112px
-    }
-
-    &.entity-guardian {
-        background-position: -32px -112px
-    }
-
-    &.entity-elder_guardian {
-        background-position: -48px -112px
-    }
-
-    &.entity-shulker {
-        background-position: -80px -32px
-    }
-
-    &.entity-bat {
-        background-position: -48px -80px
-    }
-
-    &.entity-pig {
-        background-position: 0px 0px
-    }
-
-    &.entity-sheep {
-        background-position: -16px -0px
-    }
-
-    &.entity-cow {
-        background-position: -32px -0px
-    }
-
-    &.entity-chicken {
-        background-position: -48px -0px
-    }
-
-    &.entity-squid {
-        background-position: -64px -0px
-    }
-
-    &.entity-wolf {
-        background-position: -80px -16px
-    }
-
-    &.entity-mooshroom {
-        background-position: -80px -0px
-    }
-
-    &.entity-snowman {
-        background-position: -96px -32px
-    }
-
-    &.entity-ocelot {
-        background-position: -0px -48px
-    }
-
-    &.entity-villager_golem {
-        background-position: -176px -48px
-    }
-
-    &.entity-horse {
-        background-position: -0px -96px
-    }
-
-    &.entity-donkey {
-        background-position: -16px -96px
-    }
-
-    &.entity-mule {
-        background-position: -32px -96px
-    }
-
-    &.entity-zombie_horse {
-        background-position: -64px -96px
-    }
-
-    &.entity-skeleton_horse {
-        background-position: -48px -96px
-    }
-
-    &.entity-rabbit {
-        background-position: -64px -112px
-    }
-
-    &.entity-polar_bear {
-        background-position: -0px -128px
-    }
-
-    &.entity-llama {
-        background-position: -64px -128px
-    }
-
-    &.entity-villager {
-        background-position: -96px -0px
-    }
-
-    &.entity-player {
-        background-position: -112px -0px
-    }
-
-    &.entity-lightning_bolt {
-        background-position: -144px -64px
-    }
-
-    &.entity-cod_mob {
-        background-position: -80px -160px
-    }
-
-    &.entity-salmon_mob {
-        background-position: -112px -160px
-    }
-
-    &.entity-pupper_fish {
-        background-position: -128px -160px
-    }
-
-    &.entity-phantom {
-        background-position: -64px -160px
-    }
-
-    &.entity-turtle {
-        background-position: -32px -160px
-    }
-
-    &.entity-dolphin {
-        background-position: -32px -176px
-    }
-
-    &.entity-illusioner {
-        background-position: -16px -144px
-    }
-}
-
-.block-sprite {
-    background-image: url(https://napoan.com/wp-content/uploads/2018/03/BlockCSS.png);
 }
 
 ol {

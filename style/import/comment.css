@@ -1,0 +1,43 @@
+.commentlist {
+  .comment {
+
+    a, a:visited {
+      color: #000!important;
+    }
+    .comment-body {
+      @apply my-8 p-3 bg-gray-300 rounded-xl shadow-xl;
+
+      .comment-author {
+
+      }
+      .comment-meta {
+
+      }
+      p {
+        @apply my-3;
+      }
+      .reply {
+        a.comment-reply-link {
+          @apply inline-block p-3 bg-white;
+        }
+      }
+    }
+  }
+}
+.comment-respond {
+  .reply-title {
+
+  }
+
+  textarea {
+    @apply block my-3 rounded-xl w-full;
+  }
+
+  input[type=text] {
+    @apply max-w-full my-3;
+  }
+
+  input[type=submit] {
+    @apply my-3 text-white bg-napoan w-full p-3 cursor-pointer shadow-xl rounded-xl;
+  }
+}

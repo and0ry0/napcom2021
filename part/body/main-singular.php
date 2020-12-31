@@ -31,10 +31,11 @@
   <?php endif; ?>
 
   <!-- 記事ヘッダー、記事タイトル -->
-  <header class="my-6 w-auto">
+  <header class="mb-6 w-auto">
     <?php
     if (get_the_tag_list()) {
-      echo get_the_tag_list('<dl class="c-singleTags"><dd class="c-singleTags__tag">', '</dd><dd class="c-singleTags__tag">', '</dd></dl>');
+      echo get_the_tag_list('<dl class="mb-6 flex flex-wrap">
+      <dd class="inline-block p-2 m-1 hover:bg-blue-200 border-1 font-bold border-gray-500 rounded-xl shadow-xl">', '</dd><dd class="c-singleTags__tag">', '</dd></dl>');
     }
     ?>
 
@@ -73,7 +74,7 @@
 
 
   <div class="flex flex-col 1000:flex-row">
-    <article class="overflow-hidden 650:mx-auto relative text-lg w-auto 650:w-650 my-8 leading-8" id="<?php the_ID(); ?>">
+    <article class="overflow-hidden 650:mx-auto relative text-lg w-auto 650:w-650 leading-8" id="<?php the_ID(); ?>">
 
       <section class="impt">
 
@@ -137,7 +138,8 @@
       </section>
 
       <section class="flex flex-row items-end bg-gray-100 rounded-lg">
-        <a href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php echo get_the_title(); ?>&via=napoan" target="_blank" rel="nofollow" class="flex flex-1 items-center justify-center content-center m-3 bg-twitter rounded-lg text-white text-center py-2 px-6 text-xl font-bold transition-shadow duration-300 hover:shadow-lg hover:text-white">
+        <a href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php echo get_the_title(); ?>&via=napoan" target="_blank" rel="nofollow"
+         class="flex flex-1 items-center justify-center content-center m-3 bg-twitter rounded-lg text-white text-center py-2 px-6 text-xl font-bold transition-shadow duration-300 shadow-lg hover:shadow-2xl hover:text-white">
           <svg class="w-6 mr-2" style="fill:#fff" width="50" viewBox="0 0 335 276">
             <!-- part/body/index.php 参照 -->
             <use xlink:href="#twitter-logo"></use>
@@ -202,10 +204,10 @@
         </ul>
       </div>
 
-      <section class="c-comments">
+      <section class="">
 
-        <h1 class="l-single__block article-option-title" id="commentform">コメント</h1>
-        <div class="old-message">記事の内容が最新のものと異なる場合があります。ご了承ください。
+        <h1 class="" id="commentform">コメント</h1>
+        <div class="m-2 p-2 rounded-xl shadow-xl">記事の内容が最新のものと異なる場合があります。ご了承ください。
         </div>
 
         <?php comments_template(); ?>

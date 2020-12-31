@@ -5,16 +5,22 @@
 @import './import/font.css';
 @import './import/story.css';
 @import './import/plugin.css';
+@import './import/comment.css';
 /* purgecss end ignore */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-b {
-  @apply font-bold;
-}
 
-input {
-  @apply m-1 p-1 rounded-sm border border-gray-300;
+
+
+@layer base {
+  b {
+    @apply font-bold;
+  }
+
+  input {
+    @apply m-1 p-1 rounded-sm border border-gray-300;
+  }
 }

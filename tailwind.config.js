@@ -8,6 +8,12 @@ module.exports = {
       'twitter': '#2795E9',
       'prevlink': 'rgba(0,0,0,0.5)'
      }),
+     borderColor: theme => ({
+      ...theme('colors'),
+      'napoan': '#2687e8',
+      'twitter': '#2795E9',
+      'prevlink': 'rgba(0,0,0,0.5)'
+     }),
     screens: {
       'sm': '640px',
       'md': '768px',

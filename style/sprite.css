@@ -1,0 +1,377 @@
+.sprite {
+  image-rendering: pixelated;
+  @apply inline-block align-middle h-4 w-4 bg-no-repeat;
+}
+
+.inv-sprite {
+  background-image: url(https://napoan.com/wp-content/uploads/2018/04/InvSprite-1.png);
+  @apply w-8 h-8;
+}
+
+.item-sprite {
+  background-image: url(https://napoan.com/wp-content/uploads/2018/11/ItemCSS.png);
+}
+
+.entity-sprite {
+  background-image: url(https://napoan.com/wp-content/uploads/2018/04/EntityCSS.png);
+
+  &.entity-item {
+      background-position: -16px -0px
+  }
+
+  &.entity-xp_orb {
+      background-position: -160px -64px
+  }
+
+  &.entity-area_effect_cloud {
+      background-position: -144px -36px;
+  }
+
+  &.entity-leash_knot {
+      background-position: -144px -112px
+  }
+
+  &.entity-painting {
+      background-position: -64px -80px
+  }
+
+  &.entity-item_frame {
+      background-position: -112px -112px
+  }
+
+  &.entity-evocation_fangs {
+      background-position: -128px -128px
+  }
+
+  &.entity-armor_stand {
+      background-position: -0px -208px
+  }
+
+  &.entity-ender_crystal {
+      background-position: -48px -64px
+  }
+
+  &.entity-egg {
+      background-position: -96px -48px
+  }
+
+  &.entity-arrow {
+      background-position: -64px -48px
+  }
+
+  &.entity-snowball {
+      background-position: -80px -48px
+  }
+
+  &.entity-fireball {
+      background-position: -112px -48px
+  }
+
+  &.entity-small_fireball {
+      background-position: -112px -48px
+  }
+
+  &.entity-ender_pearl {
+      background-position: -144px -48px
+  }
+
+  &.entity-eye_of_ender_signal {
+      background-position: -160px -48px
+  }
+
+  &.entity-potion {
+      background-position: -160px -112px
+  }
+
+  &.entity-xp_bottle {
+      background-position: -112px -64px
+  }
+
+  &.entity-wither_skull {
+      background-position: -176px -64px
+  }
+
+  &.entity-fireworks_rocket {
+      background-position: 0px -160px
+  }
+
+  &.entity-spectral_arrow {
+      background-position: -64px -48px
+  }
+
+  &.entity-shulker_bullet {
+      background-position: -96px -96px
+  }
+
+  &.entity-dragon_fireball {
+      background-position: -112px -96px
+  }
+
+  &.entity-llama_spit {
+      background-position: -160px -128px
+  }
+
+  &.entity-tnt {
+      background-position: -0px -64px
+  }
+
+  &.entity-commandblock_minecart {
+      background-position: -80px -96px
+  }
+
+  &.entity-boat {
+      background-position: -128px -32px
+  }
+
+  &.entity-minecart {
+      background-position: -144px -32px
+  }
+
+  &.entity-chest_minecart {
+      background-position: -160px -32px
+  }
+
+  &.entity-furnace_minecart {
+      background-position: -176px -32px
+  }
+
+  &.entity-tnt_minecart {
+      background-position: -128px -80px
+  }
+
+  &.entity-hopper_minecart {
+      background-position: -144px -80px
+  }
+
+  &.entity-spawner_minecart {
+      background-position: -160px -80px
+  }
+
+  &.entity-evocation_illager {
+      background-position: -80px -128px
+  }
+
+  &.entity-vex {
+      background-position: -96px -128px
+  }
+
+  &.entity-vindication_illager {
+      background-position: -112px -128px
+  }
+
+  &.entity-creeper {
+      background-position: -16px -16px
+  }
+
+  &.entity-skeleton {
+      background-position: -144px -0px
+  }
+
+  &.entity-wither_skeleton {
+      background-position: -64px -64px
+  }
+
+  &.entity-stray {
+      background-position: -16px -128px
+  }
+
+  &.entity-spider {
+      background-position: -160px -0px
+  }
+
+  &.entity-giant {
+      background-position: -128px -0px
+  }
+
+  &.entity-zombie {
+      background-position: -128px -0px
+  }
+
+  &.entity-zombie_villager {
+      background-position: -16px -80px
+  }
+
+  &.entity-husk {
+      background-position: -32px -128px
+  }
+
+  &.entity-slime {
+      background-position: -32px -16px
+  }
+
+  &.entity-ghast {
+      background-position: -48px -16px
+  }
+
+  &.entity-zombie_pigman {
+      background-position: -64px -16px
+  }
+
+  &.entity-enderman {
+      background-position: -128px -16px
+  }
+
+  &.entity-cave_spider {
+      background-position: -0px -16px
+  }
+
+  &.entity-silverfish {
+      background-position: -144px -16px
+  }
+
+  &.entity-blaze {
+      background-position: -112px -32px
+  }
+
+  &.entity-magma_cube {
+      background-position: -176px -16px
+  }
+
+  &.entity-ender_dragon {
+      background-position: -64px -32px
+  }
+
+  &.entity-wither {
+      background-position: -0px -80px
+  }
+
+  &.entity-witch {
+      background-position: -80px -64px
+  }
+
+  &.entity-endermite {
+      background-position: -16px -112px
+  }
+
+  &.entity-guardian {
+      background-position: -32px -112px
+  }
+
+  &.entity-elder_guardian {
+      background-position: -48px -112px
+  }
+
+  &.entity-shulker {
+      background-position: -80px -32px
+  }
+
+  &.entity-bat {
+      background-position: -48px -80px
+  }
+
+  &.entity-pig {
+      background-position: 0px 0px
+  }
+
+  &.entity-sheep {
+      background-position: -16px -0px
+  }
+
+  &.entity-cow {
+      background-position: -32px -0px
+  }
+
+  &.entity-chicken {
+      background-position: -48px -0px
+  }
+
+  &.entity-squid {
+      background-position: -64px -0px
+  }
+
+  &.entity-wolf {
+      background-position: -80px -16px
+  }
+
+  &.entity-mooshroom {
+      background-position: -80px -0px
+  }
+
+  &.entity-snowman {
+      background-position: -96px -32px
+  }
+
+  &.entity-ocelot {
+      background-position: -0px -48px
+  }
+
+  &.entity-villager_golem {
+      background-position: -176px -48px
+  }
+
+  &.entity-horse {
+      background-position: -0px -96px
+  }
+
+  &.entity-donkey {
+      background-position: -16px -96px
+  }
+
+  &.entity-mule {
+      background-position: -32px -96px
+  }
+
+  &.entity-zombie_horse {
+      background-position: -64px -96px
+  }
+
+  &.entity-skeleton_horse {
+      background-position: -48px -96px
+  }
+
+  &.entity-rabbit {
+      background-position: -64px -112px
+  }
+
+  &.entity-polar_bear {
+      background-position: -0px -128px
+  }
+
+  &.entity-llama {
+      background-position: -64px -128px
+  }
+
+  &.entity-villager {
+      background-position: -96px -0px
+  }
+
+  &.entity-player {
+      background-position: -112px -0px
+  }
+
+  &.entity-lightning_bolt {
+      background-position: -144px -64px
+  }
+
+  &.entity-cod_mob {
+      background-position: -80px -160px
+  }
+
+  &.entity-salmon_mob {
+      background-position: -112px -160px
+  }
+
+  &.entity-pupper_fish {
+      background-position: -128px -160px
+  }
+
+  &.entity-phantom {
+      background-position: -64px -160px
+  }
+
+  &.entity-turtle {
+      background-position: -32px -160px
+  }
+
+  &.entity-dolphin {
+      background-position: -32px -176px
+  }
+
+  &.entity-illusioner {
+      background-position: -16px -144px
+  }
+}
+
+.block-sprite {
+  background-image: url(https://napoan.com/wp-content/uploads/2018/03/BlockCSS.png);
+}

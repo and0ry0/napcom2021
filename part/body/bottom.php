@@ -2,7 +2,6 @@
 <?php wp_footer(); ?>
 
 <?php $string = $post->post_content;
-//load highlight.js if article includes pre tag
 if (strpos($string, '<pre>') === false) : ?>
 <?php else : ?>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/ir_black.min.css">
@@ -12,6 +11,10 @@ if (strpos($string, '<pre>') === false) : ?>
       hljs.highlightBlock(block);
     });
   </script>
+<?php endif; ?>
+<?php if (strpos($string, 'sprite ') === false) : ?>
+<?php else : ?>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/output/sprite.css">
 <?php endif; ?>
 
 <?php if ((is_page() || is_single()) && get_field('hide_adsense') == true) : ?>
