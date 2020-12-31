@@ -17,7 +17,6 @@
         <div class="flex items-center rounded-lg p-1 bg-gray-100">
           <div class="rounded-full overflow-hidden mr-3">
             <?php
-            $defaultAvatar = get_template_directory_uri() + '/img/napoanda.png';
             $avatar = get_avatar(get_the_author_meta('ID'), 32);
             echo $avatar; ?>
           </div>
