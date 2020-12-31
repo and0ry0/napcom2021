@@ -55,7 +55,7 @@
   <?php
 
   // mainタグは分岐
-  if (is_home() || is_archive()) {
+  if (is_home() || is_archive() || is_post_type_archive()) {
     get_template_part('part/body/main', 'home');
   } elseif (is_404()) {
     get_template_part('part/body/main', '404');

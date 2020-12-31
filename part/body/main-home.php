@@ -31,9 +31,10 @@
                         $cat_slug = $category->slug;
                         echo $cat_name;
                     }
-                    if (is_archive()) {
-                        $postType = get_queried_object();
-                        echo esc_html($postType->labels->singular_name);
+                    if (is_archive() || is_post_type_archive()) {
+                        $taxonomy = $wp_query->get_queried_object();
+                        $tax_name = $taxonomy->labels->singular_name;
+                        echo $tax_name . "一覧";
                     }
                     if (is_tag()) {
                         $tag_name = single_tag_title("", false);
