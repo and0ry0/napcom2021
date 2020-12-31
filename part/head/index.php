@@ -22,9 +22,6 @@
 
 <meta name="author" content="EXR-Network">
 
-<!-- Tailwind CSS移行したら消します
-<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/old_style.css"> -->
-
 <title>
 <?php if(is_home()): ?>
 <?php bloginfo('name'); ?><?php if(get_query_var('paged')): ?><?php echo ' - ページ'.get_query_var('paged'); ?><?php endif; ?>
@@ -81,14 +78,5 @@ if ($terms && ! is_wp_error($terms)): ?>
 </title>
 
 <?php wp_head(); ?>
-
-<!-- <script data-ad-client="ca-pub-9812573632041546" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
-
-<!-- AdsenseDNS
-<link rel='dns-prefetch' href='//lh3.googleusercontent.com' />
-<link rel='dns-prefetch' href='//pagead2.googlesyndication.com' />
-<link rel='dns-prefetch' href='//adservice.google.co.jp' />
-<link rel='dns-prefetch' href='//adservice.google.com' />
-<link rel='dns-prefetch' href='//googleads.g.doubleclick.net' /> -->
 
 </head>

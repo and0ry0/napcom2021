@@ -1,14 +1,16 @@
 <?php
 
+$themecsspath = get_template_directory() . '/output/style.css';
+$style_ver = filemtime( $themecsspath );
 switch ( wp_get_environment_type() ) {
   case 'local':
   case 'development':
-      wp_enqueue_style('tailwind_notpurged',get_template_directory_uri().'/output/style-dev.css',array());
+      wp_enqueue_style('tailwind_notpurged',get_template_directory_uri().'/output/style-dev.css',array(),$style_ver);
       break;
     
   case 'production':
   default:
-  wp_enqueue_style('tailwind_purged',get_template_directory_uri().'/output/style.css',array());
+  wp_enqueue_style('tailwind_purged',get_template_directory_uri().'/output/style.css',array(),$style_ver);
       break;
 }
 

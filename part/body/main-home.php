@@ -38,7 +38,7 @@
                     }
                     if (is_tag()) {
                         $tag_name = single_tag_title("", false);
-                        echo $tag_name;
+                        echo $tag_name . "タグが付いた記事一覧";
                     }
                     if (is_tax() && !is_post_type_archive()) {
                         $taxonomy = $wp_query->get_queried_object();
