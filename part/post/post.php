@@ -19,7 +19,6 @@
        style="background:<?php echo get_theme_mod('bg_author'); ?>;">
         <div class="rounded-full overflow-hidden mr-3">
           <?php
-          $defaultAvatar = get_template_directory_uri() + '/img/napoanda.png';
           $avatar = get_avatar(get_the_author_meta('ID'), 32);
           echo $avatar; ?>
         </div>
