@@ -122,3 +122,6 @@ https://maddisondesigns.com/2017/05/the-wordpress-customizer-a-developers-guide-
 ### PostCSS + tailwind CSS with WordPress
 https://viarami.com/programming/tailwind-css-wordpress-theme/
 
+### 警告
+https://premium.wpmudev.org/blog/adding-admin-notices/
+
