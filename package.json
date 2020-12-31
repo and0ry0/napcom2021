@@ -1,10 +1,10 @@
 {
   "name": "napcom2021",
-  "version": "4.2.2",
+  "version": "4.2.3",
   "description": "A simple WordPress theme for gaming media",
   "main": "index.php",
   "scripts": {
-    "build:css": " cross-env NODE_ENV=meta postcss ./postcss/meta.css -o ./style.css && cross-env NODE_ENV=production postcss ./postcss/style.css ./postcss/editor-style.css  -d ./output && postcss ./postcss/sprite.css -o ./output/sprite.css && postcss ./postcss/style.css -o ./output/style-dev.css"
+    "build:css": " cross-env NODE_ENV=meta postcss ./postcss/meta.css -o ./style.css && cross-env NODE_ENV=production postcss ./postcss/style.css ./postcss/editor-style.css  -d ./output && postcss ./postcss/sprite.css -o ./output/sprite.css"
   },
   "repository": {
     "type": "git",

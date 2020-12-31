@@ -33,7 +33,7 @@
 <?php get_template_part('part/singular/header'); ?>
 
   <div class="flex flex-col 1000:flex-row">
-    <article class="overflow-hidden mx-auto 1000:mr-auto 1000:ml-0 relative text-lg w-auto 650:w-650 leading-8" id="<?php the_ID(); ?>">
+    <article class="w-full overflow-hidden mx-auto 1000:mr-auto 1000:ml-0 relative text-lg 650:w-650 leading-8" id="<?php the_ID(); ?>">
 
       <section class="impt">
 
