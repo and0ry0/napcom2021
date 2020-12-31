@@ -56,12 +56,14 @@
     <?php
 
     // mainタグは分岐
-    if (is_home() || is_archive() || is_post_type_archive()) {
+    if (is_single() || is_page()) {
+      get_template_part('part/body/main', 'singular');
+    } elseif (is_home() || is_archive() || is_post_type_archive() || is_search() || is_tax()) {
       get_template_part('part/body/main', 'home');
     } elseif (is_404()) {
       get_template_part('part/body/main', '404');
     } else {
-      get_template_part('part/body/main', 'singular');
+      get_template_part('part/body/main', 'home');
     };
     ?>
   </main>

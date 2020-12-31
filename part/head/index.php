@@ -36,25 +36,21 @@
 
 <?php wp_title(''); ?>
 
-
-  <?php $terms = get_the_terms( $post->ID, 'games' );
-    if ($terms && ! is_wp_error($terms)): ?>
-        <?php foreach($terms as $term): ?>
-        <?php if($term->name == 'Minecraft'): ?>
-          [<?php echo $term->name; ?>]
-        <?php endif; ?>
-        <?php endforeach; ?>
+<?php $terms = get_the_terms( $post->ID, 'games' );
+if ($terms && ! is_wp_error($terms)): ?>
+    <?php foreach($terms as $term): ?>
+    <?php if($term->name == 'Minecraft'): ?>
+        [<?php echo $term->name; ?>]
     <?php endif; ?>
+    <?php endforeach; ?>
+<?php endif; ?>｜ <?php bloginfo('name'); ?>
 
-
- ｜ <?php bloginfo('name'); ?>
-
-<?php elseif(is_archive() && !is_tax() && ! is_tag()): ?>
+<?php elseif(is_archive() && !is_tax() && !is_tag()): ?>
 <?php $postType = get_queried_object(); ?>
 <?php echo esc_html($postType->labels->singular_name); ?>一覧 ｜ <?php bloginfo('name'); ?>
 
 <?php elseif(is_tag()): ?>
-<?php single_tag_title() ?> ｜ <?php bloginfo('name'); ?>
+<?php single_tag_title() ?>タグがついた記事 ｜ <?php bloginfo('name'); ?>
 
 <?php elseif(is_tax()): ?>
     <?php 

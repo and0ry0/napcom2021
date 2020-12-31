@@ -1,4 +1,4 @@
-<?php if (is_archive()) : ?>
+<?php if (is_archive() || is_search()) : ?>
     <div class="rounded-2xl shadow-xl bg-gray-900 py-8 mb-6" <?php
                                                                 if (is_single()) {
                                                                 }
@@ -24,14 +24,14 @@
             <div class="mb-4 lg:mb-0 mx-auto lg:ml-0 lg:mr-auto px-10 lg:py-0 lg:pl-0">
                 <h1 class="text-center lg:text-left text-white text-2xl font-bold">
                     <?php
-                    if (is_category()) {
+                    if (is_category() && (!is_tax() || !is_post_type_archive())) {
                         $category = get_category($cat);
                         $cat_id   = $category->cat_ID;
                         $cat_name = $category->cat_name;
                         $cat_slug = $category->slug;
                         echo $cat_name;
                     }
-                    if (is_archive() || is_post_type_archive()) {
+                    if (is_post_type_archive() && !is_tax()) {
                         $taxonomy = $wp_query->get_queried_object();
                         $tax_name = $taxonomy->labels->singular_name;
                         echo $tax_name . "一覧";
@@ -40,7 +40,7 @@
                         $tag_name = single_tag_title("", false);
                         echo $tag_name;
                     }
-                    if (is_tax()) {
+                    if (is_tax() && !is_post_type_archive()) {
                         $taxonomy = $wp_query->get_queried_object();
                         $tax_name = $taxonomy->name;
                         $tax_slug = $taxonomy->slug;
