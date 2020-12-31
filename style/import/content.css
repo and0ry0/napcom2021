@@ -59,7 +59,7 @@ h3,
 h4,
 h5,
 h6 {
-    @apply mx-1 rounded-r-xl font-bold leading-loose my-5 p-3 pl-5 border-gray-400 relative;
+    @apply mx-1 font-bold leading-loose my-5 p-2 pl-3 border-gray-400 relative;
 
 }
 
@@ -75,7 +75,7 @@ h6:before {
 
 h1 {
     box-shadow: 0px 0px 6px rgba(100, 100, 100, 0.5);
-    @apply text-2xl py-2 pl-3;
+    @apply text-3xl py-2 pl-3;
 
     &:before {
         @apply border-napoan;
@@ -84,7 +84,7 @@ h1 {
 
 h2 {
     box-shadow   : 0px 3px 0px #848484;
-    @apply text-xl;
+    @apply text-3xl;
     &:before {
         @apply border-gray-700;
     }

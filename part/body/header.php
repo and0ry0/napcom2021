@@ -1,5 +1,5 @@
-<header class="w-screen overflow-hidden mb-8">
-  <div class="px-3 mx-auto w-screen 650:w-650 960:w-960 relative pt-6 h-full flex justify-center items-center 650:justify-between">
+<header class="w-screen overflow-hidden mb-4">
+  <div class="mx-auto px-4 650:px-0 w-screen 650:w-650 1000:w-960 relative pt-6 h-full flex justify-center items-center 650:justify-between">
     <a class="mr-15" href="<?php echo home_url(); ?>" alt="トップページへ">
       <svg style="fill: <?php echo get_theme_mod('fill_logo') ?>" xmlns="//www.w3.org/2000/svg" <?php
                                                                                                 $logoSelection = get_theme_mod('select_logo');
@@ -32,9 +32,9 @@
         'theme_location'              => "header_menu",
         'menu_class'        => "flex",
         'container_class'   => "flex",
-        'before'            => "<li class=\"mx-3\">",
+        'before'            => "<li class=\"ml-3\">",
         'after' => "</li>",
-        'link_before' => "<a class=\"inline-block p-1 rounded-md hover:bg-gray-200\">",
+        'link_before' => "<a class=\"inline-block bg-gray-100 transition duradion-300 p-2 rounded-md hover:bg-gray-200\">",
         'link_after' => "</a>"
       )); ?>
     </div>

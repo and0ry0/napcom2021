@@ -24,57 +24,16 @@
         </h1>
       </div>
       <dl class="">
-        <dd>A. <?php the_field("answer", $post->ID); ?></dd>
+        <dd>A. <?php if(function_exists('the_field')){the_field("answer", $post->ID);} ?></dd>
       </dl>
     </div>
 
   <?php endif; ?>
 
-  <!-- 記事ヘッダー、記事タイトル -->
-  <header class="mb-6 w-auto">
-    <?php
-    if (get_the_tag_list()) {
-      echo get_the_tag_list('<dl class="mb-6 flex flex-wrap">
-      <dd class="inline-block p-2 m-1 hover:bg-blue-200 border-1 font-bold border-gray-500 rounded-xl shadow-xl">', '</dd><dd class="c-singleTags__tag">', '</dd></dl>');
-    }
-    ?>
-
-    <small class="inline-block">
-      投稿日:<time datetime="<?php echo get_the_date('Y年m月d日'); ?>" pubdate="pubdate"><?php echo get_the_date('Y年m月d日'); ?></time><br>
-      最終更新:<time datetime="<?php the_modified_date('Y年m月d日') ?>" pubdate="pubdate"><?php the_modified_date('Y年m月d日'); ?></time>
-    </small>
-
-    <?php if (get_post_type() != ('qanda')) : ?>
-      <h1 class="mt-3 text-2xl font-bold text-black sm:text-3xl" itemprop="name">
-        <?php the_title(); ?>
-        <?php
-        $terms = get_the_terms($post->ID, 'games');
-        if ($terms && !is_wp_error($terms)) : ?>
-          <span id="c-singleHeader__games">
-            <?php foreach ($terms as $term) : ?>
-              <?php if ($term->name == 'Minecraft') : ?>
-                <span class="game <?php echo $term->slug; ?>">
-                  <a href="<?php echo get_term_link($term->slug, 'games'); ?>">
-                    [<?php echo $term->name; ?>]
-                  </a>
-                </span>
-              <?php endif; ?>
-            <?php endforeach; ?>
-          </span>
-        <?php endif; ?>
-      </h1>
-      <?php if (get_post_type() === 'post') : ?>
-        <span class="my-4 text-gray-600">
-          <?php the_field("introduction", $post->ID); ?>
-        </span>
-      <?php endif; ?>
-    <?php endif; ?>
-
-  </header>
-
+<?php get_template_part('part/singular/header'); ?>
 
   <div class="flex flex-col 1000:flex-row">
-    <article class="overflow-hidden 650:mx-auto relative text-lg w-auto 650:w-650 leading-8" id="<?php the_ID(); ?>">
+    <article class="overflow-hidden mx-auto 1000:mr-auto 1000:ml-0 relative text-lg w-auto 650:w-650 leading-8" id="<?php the_ID(); ?>">
 
       <section class="impt">
 
@@ -114,7 +73,7 @@
 
           <div id="moreinfo">
             <h2>もっと詳しい解説はこちら!</h2>
-            <?php the_field('moreinfo'); ?>
+            <?php if(function_exists('the_field')){the_field('moreinfo');} ?>
           </div>
 
         <?php endif; ?>
