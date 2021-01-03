@@ -17,6 +17,7 @@ if (strpos($string, '<pre>') === false) : ?>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/output/sprite.css">
 <?php endif; ?>
 
+<?php if(function_exists('get_field')): ?>
 <?php if ((is_page() || is_single()) && get_field('hide_adsense') == true) : ?>
   <style>
     .sense {
@@ -24,4 +25,4 @@ if (strpos($string, '<pre>') === false) : ?>
     }
   </style>
 
-<?php endif; ?>
+<?php endif; endif; ?>

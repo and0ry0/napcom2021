@@ -5,4 +5,3 @@
     <small>Copyright 2020 <?php bloginfo('name'); ?> <a href="/privacy-policy/">(プライバシーポリシー)</a></small>
   </div>
 </footer>
-<?php get_template_part('part/body/exr');  ?>
