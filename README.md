@@ -3,6 +3,8 @@
 A simple theme for gaming media.
 Designed by [@sasigume](https://github.com/sasigume)
 
+**This theme requires WordPress 5.5+**
+
 
 ## カスタマイザー
 

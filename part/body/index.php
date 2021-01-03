@@ -50,7 +50,11 @@
 
   <?php
   //メニューは共通
-  get_template_part('part/body/header'); ?>
+
+  get_template_part('part/body/topmenu'); 
+  get_template_part('part/body/header', null, array(
+    'mode' => 'top'
+  )); ?>
 
   <main class="flex-grow mx-auto px-4 650:px-0 w-screen 650:w-650 1000:w-960 mb-8">
     <?php
