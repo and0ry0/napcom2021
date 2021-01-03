@@ -35,7 +35,7 @@
         'container_class'   => "flex flex-wrap list-none",
         'before'            => "<div class=\"ml-3\">",
         'after' => "</div>",
-        'link_before' => "<a class=\"inline-block bg-gray-100 transition duradion-300 p-2 rounded-md hover:bg-gray-200\">",
+        'link_before' => "<a class=\"cursor-pointer inline-block bg-gray-100 transition duradion-300 p-2 rounded-md hover:bg-gray-200\">",
         'link_after' => "</a>"
       )); ?>
     </div>
