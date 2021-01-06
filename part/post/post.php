@@ -2,12 +2,12 @@
   <div class="flex-grow">
     <?php if (has_post_thumbnail()) : ?>
       <?php if (get_the_post_thumbnail_url() == null) : ?>
-        <img class="h-full object-cover w-max" alt="NO IMAGE" src="<?php echo get_template_directory_uri() ?>/img/napocomlogo2020-ogp.png" title="NO IMAGE" width="600px" height="338px" />
+        <img class="h-full object-cover" alt="NO IMAGE" src="<?php echo get_template_directory_uri() ?>/img/napocomlogo2020-ogp.png" title="NO IMAGE" width="343px" height="220px" />
       <?php else : ?>
-        <img class="h-full object-cover w-max" src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>のアイキャッチ画像" title="<?php the_title(); ?>" width="600px" height="338px" />
+        <img class="h-full object-cover" src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'thumbnail' )[0] ?>" alt="<?php the_title(); ?>のアイキャッチ画像" title="<?php the_title(); ?>" width="343px" height="220px" />
       <?php endif; ?>
     <?php else : ?>
-      <img class="h-full object-cover w-max" alt="NO IMAGE" src="<?php echo get_template_directory_uri() ?>/img/napocomlogo2020-ogp.png" title="NO IMAGE" width="600px" height="338px" />
+      <img class="h-full object-cover" alt="NO IMAGE" src="<?php echo get_template_directory_uri() ?>/img/napocomlogo2020-ogp.png" title="NO IMAGE" width="343px" height="220px" />
     <?php endif; ?>
   </div>
   <div class="flex-none p-3">
