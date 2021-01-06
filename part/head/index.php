@@ -22,6 +22,10 @@
 
 <meta name="author" content="EXR-Network">
 
+<?php if(is_home()): ?>
+<meta name="description" content="<?php echo bloginfo('description') ?>">
+<?php endif; ?>
+
 <title>
 <?php if(is_home()): ?>
 <?php bloginfo('name'); ?><?php if(get_query_var('paged')): ?><?php echo ' - ページ'.get_query_var('paged'); ?><?php endif; ?>

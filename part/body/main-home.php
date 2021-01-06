@@ -75,7 +75,7 @@
             } ?>
             <?php if (is_tax()) : ?>
                 <div class="w-64 rounded-xl overflow-hidden">
-                    <img src="<?php echo $packagesp[0]; ?>" />
+                    <img alt="パッケージ画像" src="<?php echo $packagesp[0]; ?>" />
                 </div>
             <?php endif; ?>
 
