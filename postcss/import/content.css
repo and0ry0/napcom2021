@@ -179,28 +179,12 @@ strong {
 }
 
 kbd {
-    padding       : 4px 8px;
-    margin        : 3px 6px;
-    background    : #EFF0F2;
-    border-radius : 4px;
     border-top    : 1px solid #F5F5F5;
-    box-shadow    : 0 1px 0 #c3c3c3, 0 2px 0 #c9c9c9, 0 2px 3px #333333;
-    color         : #000;
-    text-align    : center;
-    line-height   : 1;
-    font-weight   : bold;
-    display       : inline-block;
-    vertical-align: middle;
-    zoom          : 1;
-    position      : relative;
-    bottom        : 0.2em;
+    @apply inline-block bottom-4 relative align-middle py-2 px-4 my-1 mx-2 bg-gray-100 rounded-lg shadow-md text-black text-center font-bold;
 }
 
 blockquote {
-    margin       : 1em 0.5em 1em;
-    padding      : 1em;
-    background   : #eee;
-    border-radius: 8px;
+    @apply my-4 mx-2 p-3 bg-gray-50 rounded-xl;
 }
 
 table {
@@ -479,67 +463,34 @@ a.back-button {
 }
 
 ul#mokuzi {
-    list-style-type: none;
-    border         : solid 2px #444;
-    border-top     : solid 0px #fff;
-    padding        : 0px;
-    margin         : 10px;
-    box-shadow     : 0px 3px 0px rgba(1, 1, 1, 0.3);
+    @apply list-none border-gray-500 p-0 m-4 shadow-md;
 
     li:after {
-        display: none !important;
+        @apply hidden;
     }
 
     >li {
-        display    : block;
-        margin-left: 0px;
+        @apply block ml-0;
 
         >a {
-            margin-left    : -3px;
-            margin-top     : -1px;
-            display        : block;
-            padding        : 10px;
-            width          : 98%;
-            font-size      : 19px;
-            font-size      : 1.2rem;
-            font-weight    : bold;
-            background     : #b5e8ff;
-            line-height    : 1.2rem;
-            text-decoration: none;
-            box-shadow     : 1px 3px 5px rgba(1, 1, 1, 0.4);
-            z-index        : 2;
+            @apply p-3 z-10 -ml-3 -ml-1 block text-lg font-bold bg-gray-400 leading-5 no-underline shadow-md;
         }
 
         >ul {
-            list-style-type: none;
-            padding-left   : 0px;
-            margin-left    : 0px;
+            @apply list-none pl-0 ml-0;
 
             >li {
-                position       : relative;
-                padding-right  : 15px;
-                border-bottom  : solid 1px #333;
-                list-style-type: none;
-                margin-left    : 0px;
+                @apply pb-2 list-none relative pl-6 border-b border-gray-500 ml-0;
 
                 &:last-child {
-                    border-bottom: solid 0px #fff;
+                    @apply border-white;
                 }
 
                 a {
-                    font-size      : 17px;
-                    font-size      : 1rem;
-                    display        : block;
-                    line-height    : 20px;
-                    line-height    : 1.4rem;
-                    padding        : 8px;
-                    text-decoration: none;
+                    @apply text-lg no-underline block leading-loose;
 
                     &.big {
-                        font-size  : 19px;
-                        font-size  : 1.2rem;
-                        line-height: 20px;
-                        line-height: 1.4rem;
+                        @apply text-xl;
                     }
 
                     &:before,
@@ -549,18 +500,16 @@ ul#mokuzi {
                         border-top   : solid 10px transparent;
                         border-right : solid 10px transparent;
                         border-bottom: solid 10px transparent;
-                        width        : 0px;
-                        height       : 0px;
-                        bottom       : 8px;
+                        @apply absolute w-0 h-0 bottom-2;
                     }
 
                     &:before {
-                        right      : 0px;
+                        @apply right-0;
                         border-left: solid 10px #000000;
                     }
 
                     &:after {
-                        right      : 2px;
+                        @apply right-1;
                         border-left: solid 10px #fff;
                     }
                 }
@@ -570,11 +519,7 @@ ul#mokuzi {
 }
 
 .quote-image {
-    display   : inline-block;
-    margin    : 8px 4px;
-    padding   : 5px;
-    background: #2687e8;
-    color     : #fff;
+    @apply inline-block my-2 mx-1 p-2 bg-napoan text-white;
 
     a,
     a:visited,
@@ -588,9 +533,7 @@ ul#mokuzi {
 Amazon
 ------------------- */
 .aalb-pa-ad-unit {
-    padding: 20px 10px;
-    border : solid 2px #DDD;
-    margin : 10px 0px;
+    @apply py-8 px-4 border-gray-100 my-4;
 
     &.pull-left {
         float: none;
