@@ -26,6 +26,7 @@
       <a class="text-black bg-white inline-block p-2 font-bold <?php echo $round ?>"><?php echo bloginfo('name') ?></a>
       <?php
       $links = array(
+        '🐤 Twitter' => 'https://twitter.com/napoan',
         '🚆 都市開発ワールド' => 'http://portal.eximradar.jp/?p=156',
         '🏹 RPG TheLow' => 'https://wikiwiki.jp/thelow/',
         '🍖 サバイバルワールド' => 'https://portal.eximradar.jp/?p=625'
