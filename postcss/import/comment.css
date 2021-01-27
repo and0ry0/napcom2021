@@ -1,4 +1,6 @@
 .commentlist {
+  @apply list-none pl-0;
+
   .comment {
 
     a, a:visited {
