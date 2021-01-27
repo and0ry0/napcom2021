@@ -21,7 +21,7 @@
 
         <div class="w-auto mx-auto px-8 pt-0 text-center flex items-center justify-between flex-col lg:flex-row">
 
-            <div class="mb-4 lg:mb-0 mx-auto lg:ml-0 lg:mr-auto px-10 lg:py-0 lg:pl-0">
+            <div class="lg:mb-0 mx-auto lg:ml-0 lg:mr-auto px-10 lg:py-0 lg:pl-0">
                 <h1 class="text-center lg:text-left text-white text-2xl font-bold">
                     <?php
                     if (is_category() && (!is_tax() || !is_post_type_archive())) {
@@ -74,7 +74,7 @@
                 $packagesp = wp_get_attachment_image_src($package, 'full');
             } ?>
             <?php if (is_tax()) : ?>
-                <div class="w-64 rounded-xl overflow-hidden">
+                <div class="w-64 mt-4 rounded-xl overflow-hidden">
                     <img alt="パッケージ画像" src="<?php echo $packagesp[0]; ?>" />
                 </div>
             <?php endif; ?>
