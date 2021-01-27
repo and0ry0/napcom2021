@@ -26,18 +26,13 @@
     </a>
 
     <div class="hidden ml-auto 650:flex">
-      <?php
-      wp_nav_menu(array(
-        // widget.php参照
-        'theme_location'    => "header_menu",
-        'items_wrap' => '%3$s',
-        'menu_class'        => "",
-        'container_class'   => "flex flex-wrap list-none",
-        'before'            => "<div class=\"ml-3\">",
-        'after' => "</div>",
-        'link_before' => "<a class=\"cursor-pointer inline-block bg-gray-100 transition duradion-300 p-2 rounded-md hover:bg-gray-200\">",
-        'link_after' => "</a>"
-      )); ?>
+      <form role="search" method="get" id="searchform" class="searchform" action="/">
+        <div>
+          <label class="screen-reader-text" for="s">検索:</label>
+          <input type="text" value="" name="s" id="s">
+          <input type="submit" id="searchsubmit" value="検索">
+        </div>
+      </form>
     </div>
   </div>
 </header>
