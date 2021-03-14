@@ -13,6 +13,15 @@
 <!-- Adsense担当者さんよろしくお願いします＞＜ -->
 <script data-ad-client="ca-pub-9936387301896850" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
+<!-- tag manager 2021-03-15 -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PQMHZF4');</script>
+<!-- End Google Tag Manager -->
+
 <?php if( is_single() ): ?>
     <?php if( have_posts() ): ?>
         <?php while( have_posts() ): the_post(); ?>
