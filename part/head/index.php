@@ -10,6 +10,9 @@
 
 <?php get_template_part(('part/head/icon')); ?>
 
+<!-- Adsense担当者さんよろしくお願いします＞＜ -->
+<script data-ad-client="ca-pub-9936387301896850" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 <?php if( is_single() ): ?>
     <?php if( have_posts() ): ?>
         <?php while( have_posts() ): the_post(); ?>
