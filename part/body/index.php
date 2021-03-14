@@ -1,5 +1,4 @@
 <body class="flex flex-col min-h-screen bg-white">
-  <!-- フッター下の余白をなくす -->
 
   <svg style="display:none;" version="1.1" xmlns="//www.w3.org/2000/svg">
     <defs>
@@ -21,7 +20,7 @@
   </svg>
 
   <!-- Google Tag Manager -->
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WPT2KT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PQMHZF4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script>
     (function(w, d, s, l, i) {
       w[l] = w[l] || [];
