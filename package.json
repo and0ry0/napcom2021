@@ -1,6 +1,6 @@
 {
   "name": "napcom2021",
-  "version": "4.4.1",
+  "version": "4.4.2",
   "description": "A simple WordPress theme for gaming media",
   "main": "index.php",
   "scripts": {
@@ -13,7 +13,7 @@
   "keywords": [
     "WordPress"
   ],
-  "author": "EXR-network",
+  "author": "sasigume",
   "license": "GPL-3.0",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^3.1.3",

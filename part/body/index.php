@@ -76,7 +76,7 @@
   get_template_part('part/body/topmenu', null, array(
     'mode' => 'bottom'
   ));
-  get_template_part('part/body/exr');
+  /* get_template_part('part/body/exr'); */
   get_template_part('part/body/bottom'); ?>
 
 </body>

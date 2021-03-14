@@ -23,7 +23,7 @@
 <link rel="alternate" hreflang="ja" href="<?php echo home_url(); ?>">
 <?php endif; ?>
 
-<meta name="author" content="EXR-Network">
+<meta name="author" content="sasigume">
 
 <?php if(is_home()): ?>
 <meta name="description" content="<?php echo bloginfo('description') ?>">
