@@ -41,6 +41,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   )); ?>
 
   <main class="flex-grow mx-auto px-4 650:px-0 w-screen 650:w-650 1000:w-960 mb-8">
+
+  <div class="text-center py-16 text-xl">※サイト移転のため、<b>サムネイルが正しく設定されていないかもしれません。</b>ご了承ください。</div>
+  
     <?php
 
     // mainタグは分岐

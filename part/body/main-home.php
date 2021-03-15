@@ -95,5 +95,3 @@
 <?php if (function_exists('wp_pagenavi')) : ?>
     <div class="mt-10"><?php wp_pagenavi(); ?></div>
 <?php endif; ?>
-
-<div class="text-center py-16 text-xl">※サイト移転のため、<b>サムネイルが正しく設定されていないかもしれません。</b>ご了承ください。</div>
