@@ -33,7 +33,7 @@ function napcom_tax_notice()
 }
 
 
-// 記事公開前に確認
+/* 記事公開前に確認
 $c_message = '記事を公開します。宜しいでしょうか？';
 
 function confirm_publish()
@@ -47,6 +47,7 @@ if (publish !== null) publish.onclick = function(){
 // --></script>';
 }
 add_action('admin_footer', 'confirm_publish');
+*/
 
 // 管理画面でゲームで絞り込み
 add_action('restrict_manage_posts', 'add_post_games_restrict_filter');
