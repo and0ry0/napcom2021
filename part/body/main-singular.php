@@ -32,6 +32,8 @@
 
 <?php get_template_part('part/singular/header'); ?>
 
+<?php if(get_field('hide_adsense') !== true) {get_template_part('/part/adsense/belowtitle');} ?>
+
   <div class="flex flex-col 1000:flex-row">
     <article class="w-full overflow-hidden mx-auto 1000:mr-auto 1000:ml-0 relative text-lg 650:w-650 leading-8" id="<?php the_ID(); ?>">
 
@@ -60,9 +62,8 @@
           the_content(''); ?>
 
         <!-- 以下が続き -->
-        <div class="my-10">
-          <?php if (function_exists('wpsabox_author_box')) echo wpsabox_author_box(); ?>
-        </div>
+
+        <?php if(get_field('hide_adsense') !== true) {get_template_part('/part/adsense/readmore');} ?>
 
         <?php $more = 1;
           the_content('', true);
@@ -95,6 +96,8 @@
         ?>
 
       </section>
+
+      <?php if(get_field('hide_adsense') !== true) {get_template_part('/part/adsense/bottomad');} ?>
 
       <section class="flex flex-row items-end bg-gray-100 rounded-lg">
         <a href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php echo get_the_title(); ?>&via=napoan" target="_blank" rel="nofollow"

@@ -10,7 +10,6 @@
 
 <?php get_template_part(('part/head/icon')); ?>
 
-<!-- Adsense担当者さんよろしくお願いします＞＜ -->
 <script data-ad-client="ca-pub-9936387301896850" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <!-- tag manager 2021-03-15 -->
