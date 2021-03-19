@@ -19,10 +19,9 @@
     </defs>
   </svg>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQMHZF4"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQMHZF4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <svg style="display:none;" version="1.1" xmlns="//www.w3.org/2000/svg">
     <defs>
@@ -35,15 +34,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <?php
   //メニューは共通
 
-  get_template_part('part/body/topmenu'); 
+  get_template_part('part/body/topmenu');
   get_template_part('part/body/header', null, array(
     'mode' => 'top'
   )); ?>
 
+  <div class="mb-8 w-screen relative overflow-hidden" style="height: 12rem;background:linear-gradient(344deg, rgba(38,135,232,0.6320903361344538) 0%, rgba(58,199,227,0.4248074229691877) 100%);">
+
+    <div class="w-full absolute z-20 top-0 left-0 py-16">
+      <div class="w-full md:w-sm lg:w-md mx-auto">
+        <div class="text-2xl text-white" style="text-shadow:0px 1px 5px #000">日本最大の、<br />マインクラフト情報源。</div>
+      </div>
+    </div>
+    <div class="absolute special_img_div">
+      <img class="w-full" src="<?php bloginfo('template_directory'); ?>/img/bg-thumbnails.png')" />
+    </div>
+    <style>.special_img_div{top:-200px;left:-240px;min-width:140%;}
+  @media screen and (max-width:1300px){.special_img_div{top:-150px;left:-100px;min-width:150%;}} 
+  @media screen and (max-width:600px){.special_img_div{top:-100px;left:-150px;min-width:160%;}} 
+  </style>
+  </div>
+
   <main class="flex-grow mx-auto px-4 650:px-0 w-screen 650:w-650 1000:w-960 mb-8">
 
-  <div class="text-center py-16 text-xl">※サイト移転のため、<b>サムネイルが正しく設定されていないかもしれません。</b>ご了承ください。</div>
-  
+
     <?php
 
     // mainタグは分岐
