@@ -1,5 +1,5 @@
 <!-- 記事下レスポンシブ -->
-<div class="sense">
+<div class="sense my-6">
 <small class="text-sm text-gray-800">スポンサーリンク</small>
 <ins class="adsbygoogle"
      style="display:block"

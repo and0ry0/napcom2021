@@ -6,7 +6,7 @@ function my_styles() {
   add_editor_style( '/output/editor-style.css' );} //子テーマのスタイルシートの追加
 add_action( 'admin_init', 'my_styles' );
 
-/* 自動整形を無効化
+// 自動整形を無効化
 add_action('init', function() {
     remove_filter('the_title', 'wptexturize');
     remove_filter('the_content', 'wptexturize');
@@ -30,5 +30,5 @@ return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\
 return preg_replace('/<p>&nbsp;<\/p>/iU', '<br>', $content);
 }
 add_filter('the_content', 'filter_contents');
-*/
+
 ?>

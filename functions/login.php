@@ -2,7 +2,7 @@
 function my_login_logo() { ?>
     <style>
         #login h1 a, .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/img/logo3-512x.png);
+            background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/img/logo3-512x.png');
         }
     </style>
 <?php }
