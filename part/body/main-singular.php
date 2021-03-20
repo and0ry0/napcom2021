@@ -97,9 +97,8 @@
 
       </section>
 
-      <?php if(get_field('hide_adsense') !== true) {get_template_part('/part/adsense/bottomad');} ?>
-
-      <section class="flex flex-row items-end bg-gray-100 rounded-lg">
+      
+      <section class="my-6 flex flex-row items-end bg-gray-100 rounded-lg">
         <a href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php echo get_the_title(); ?>&via=napoan" target="_blank" rel="nofollow"
          class="flex flex-1 items-center justify-center content-center m-3 bg-twitter rounded-lg text-white text-center py-2 px-6 text-xl font-bold transition-shadow duration-300 shadow-lg hover:shadow-2xl hover:text-white">
           <svg class="w-6 mr-2" style="fill:#fff" width="50" viewBox="0 0 335 276">
@@ -107,6 +106,9 @@
             <use xlink:href="#twitter-logo"></use>
           </svg><b>Tweet</b></a>
       </section>
+
+      <?php if(get_field('hide_adsense') !== true) {get_template_part('/part/adsense/bottomad');} ?>
+
 
       <div class="my-12">
         <ul class="text-xs sm:text-sm flex flex-col sm:flex-row">
