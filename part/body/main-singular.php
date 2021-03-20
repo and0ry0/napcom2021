@@ -99,7 +99,7 @@
 
       
       <section class="my-6 flex flex-row items-end bg-gray-100 rounded-lg">
-        <a href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php echo get_the_title(); ?>&via=napoan" target="_blank" rel="nofollow"
+        <a href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php echo get_the_title(); ?>&via=sasigume" target="_blank" rel="nofollow"
          class="flex flex-1 items-center justify-center content-center m-3 bg-twitter rounded-lg text-white text-center py-2 px-6 text-xl font-bold transition-shadow duration-300 shadow-lg hover:shadow-2xl hover:text-white">
           <svg class="w-6 mr-2" style="fill:#fff" width="50" viewBox="0 0 335 276">
             <!-- part/body/index.php 参照 -->
