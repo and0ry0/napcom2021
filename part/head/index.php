@@ -81,6 +81,15 @@
             <?php endif; ?>
     </title>
 
+    <?php if (get_field('hide_adsense') == true) : ?>
+
+        <script>
+            dataLayer = [{
+                'hideAdsense': 'true'
+            }];
+        </script>
+    <?php endif; ?>
+
     <?php wp_head(); ?>
 
 </head>
