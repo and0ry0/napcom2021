@@ -34,7 +34,7 @@
 
   <?php get_template_part('part/singular/header'); ?>
 
-  <?php if (function_exists('get_field')) {
+  <?php if (function_exists('the_ad')) {
     the_ad(1051);
   } ?>
 
@@ -67,7 +67,7 @@
           $more = 0;
           the_content(''); ?>
 
-          <?php if (function_exists('get_field')) {
+          <?php if (function_exists('the_ad')) {
             the_ad(1050);
           } ?>
 
@@ -117,7 +117,7 @@
           </svg><b>Tweet</b></a>
       </section>
 
-      <?php if (function_exists('get_field')) {
+      <?php if (function_exists('the_ad')) {
         the_ad(1052);
       } ?>
 
