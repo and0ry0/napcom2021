@@ -80,8 +80,7 @@
 
             <?php endif; ?>
     </title>
-
-    <?php if (get_field('hide_adsense') == true) : ?>
+    <?php if (function_exists('get_field') && get_field('hide_adsense') == true) : ?>
 
         <script>
             dataLayer = [{

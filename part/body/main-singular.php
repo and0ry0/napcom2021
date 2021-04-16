@@ -34,6 +34,10 @@
 
   <?php get_template_part('part/singular/header'); ?>
 
+  <?php if (function_exists('get_field')) {
+    the_ad(1051);
+  } ?>
+
 
 
   <div class="flex flex-col 1000:flex-row">
@@ -62,6 +66,10 @@
           global $more;
           $more = 0;
           the_content(''); ?>
+
+          <?php if (function_exists('get_field')) {
+            the_ad(1050);
+          } ?>
 
           <!-- 以下が続き -->
 
@@ -108,6 +116,10 @@
             <use xlink:href="#twitter-logo"></use>
           </svg><b>Tweet</b></a>
       </section>
+
+      <?php if (function_exists('get_field')) {
+        the_ad(1052);
+      } ?>
 
 
       <div class="my-12">
