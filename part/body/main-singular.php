@@ -24,15 +24,17 @@
         </h1>
       </div>
       <dl class="">
-        <dd>A. <?php if(function_exists('the_field')){the_field("answer", $post->ID);} ?></dd>
+        <dd>A. <?php if (function_exists('the_field')) {
+                  the_field("answer", $post->ID);
+                } ?></dd>
       </dl>
     </div>
 
   <?php endif; ?>
 
-<?php get_template_part('part/singular/header'); ?>
+  <?php get_template_part('part/singular/header'); ?>
 
-<?php if(get_field('hide_adsense') !== true) {get_template_part('/part/adsense/belowtitle');} ?>
+
 
   <div class="flex flex-col 1000:flex-row">
     <article class="w-full overflow-hidden mx-auto 1000:mr-auto 1000:ml-0 relative text-lg 650:w-650 leading-8" id="<?php the_ID(); ?>">
@@ -61,9 +63,8 @@
           $more = 0;
           the_content(''); ?>
 
-        <!-- 以下が続き -->
+          <!-- 以下が続き -->
 
-        <?php if(get_field('hide_adsense') !== true) {get_template_part('/part/adsense/readmore');} ?>
 
         <?php $more = 1;
           the_content('', true);
@@ -74,7 +75,9 @@
 
           <div id="moreinfo">
             <h2>もっと詳しい解説はこちら!</h2>
-            <?php if(function_exists('the_field')){the_field('moreinfo');} ?>
+            <?php if (function_exists('the_field')) {
+              the_field('moreinfo');
+            } ?>
           </div>
 
         <?php endif; ?>
@@ -97,17 +100,14 @@
 
       </section>
 
-      
+
       <section class="my-6 flex flex-row items-end bg-gray-100 rounded-lg">
-        <a href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php echo get_the_title(); ?>&via=sasigume" target="_blank" rel="nofollow"
-         class="flex flex-1 items-center justify-center content-center m-3 bg-twitter rounded-lg text-white text-center py-2 px-6 text-xl font-bold transition-shadow duration-300 shadow-lg hover:shadow-2xl hover:text-white">
+        <a href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php echo get_the_title(); ?>&via=sasigume" target="_blank" rel="nofollow" class="flex flex-1 items-center justify-center content-center m-3 bg-twitter rounded-lg text-white text-center py-2 px-6 text-xl font-bold transition-shadow duration-300 shadow-lg hover:shadow-2xl hover:text-white">
           <svg class="w-6 mr-2" style="fill:#fff" width="50" viewBox="0 0 335 276">
             <!-- part/body/index.php 参照 -->
             <use xlink:href="#twitter-logo"></use>
           </svg><b>Tweet</b></a>
       </section>
-
-      <?php if(get_field('hide_adsense') !== true) {get_template_part('/part/adsense/bottomad');} ?>
 
 
       <div class="my-12">
@@ -155,7 +155,8 @@
                                                                                                                                               };
                                                                                                                                               ?>)">
                 <div class="z-10 bg-gray-400 bg-opacity-20 w-full h-40 p-6">
-                  <span class="text-white bg-gray-800 p-1 leading-10">Next: <?php echo esc_attr($nextpost->post_title); ?></span></div>
+                  <span class="text-white bg-gray-800 p-1 leading-10">Next: <?php echo esc_attr($nextpost->post_title); ?></span>
+                </div>
               </a>
             <?php else : ?>
               <a class="block h-40 flex-1 bg-center bg-cover" href="/" style="background-image: url(/wp-content/themes/napcom2021/img/napocomlogo2020-ogp.png)">

@@ -95,5 +95,3 @@
 <?php if (function_exists('wp_pagenavi')) : ?>
     <div class="mt-10 mb-10"><?php wp_pagenavi(); ?></div>
 <?php endif; ?>
-
-<?php if(get_field('hide_adsense') !== true) {get_template_part('/part/adsense/belowarchive');} ?>
