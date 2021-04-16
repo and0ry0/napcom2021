@@ -95,3 +95,6 @@
 <?php if (function_exists('wp_pagenavi')) : ?>
     <div class="mt-10 mb-10"><?php wp_pagenavi(); ?></div>
 <?php endif; ?>
+<?php if (function_exists('get_field')) {
+    the_ad(1052);
+} ?>
