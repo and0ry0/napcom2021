@@ -1,10 +1,15 @@
 {
   "name": "napcom2021",
-  "version": "4.5.5",
+  "version": "4.5.6",
   "description": "A simple WordPress theme for gaming media",
   "main": "index.php",
   "scripts": {
-    "build:css": " cross-env NODE_ENV=meta postcss ./postcss/meta.css -o ./style.css && cross-env NODE_ENV=production postcss ./postcss/style.css ./postcss/editor-style.css  -d ./output && postcss ./postcss/sprite.css -o ./output/sprite.css && postcss ./postcss/style.css -o ./output/style-dev.css"
+    "meta": "echo \"Updating theme info\" && cross-env NODE_ENV=meta postcss ./postcss/meta.css -o ./style.css",
+    "production": "cross-env NODE_ENV=production postcss ./postcss/style.css ./postcss/editor-style.css -d ./output",
+    "sprite": "postcss ./postcss/sprite.css -o ./output/sprite.css",
+    "dev": "postcss ./postcss/style.css -o ./output/style-dev.css",
+    "gutenberg": "postcss ./postcss/gutenberg-style.css -o ./output/gutenberg-style.css",
+    "build:css": "run-s meta production sprite dev gutenberg"
   },
   "repository": {
     "type": "git",
@@ -20,6 +25,7 @@
     "autoprefixer": "^10.1.0",
     "cross-env": "^7.0.3",
     "cssnano": "^4.1.10",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.2.1",
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.0",

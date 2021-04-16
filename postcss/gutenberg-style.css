@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+@import './import/variable.css';
+@import './import/font.css';
+
+
+.editor-styles-wrapper {
+  font-family: 'Noto Sans JP'!important;
+  @import './postcss/import/content.css';
+  width: 650px;
+  margin: 0 auto;
+  color: #080000;
+  font-size: 14px;
+}
