@@ -10,7 +10,7 @@ add_action( 'load-index.php',
 
 function napcom_cpt_notice()
 {
-    $acfJson = "https://github.com/sasigume/napcom2021/blob/master/acf/acf-export-2020-12-31.json";
+    $acfJson = "https://github.com/imaicu/napoancom-wp/blob/master/acf/acf-export-2020-12-31.json";
     $notice = '記事のデータが動かない場合は、「Advanced Custom Fields」をインストールして、 <a target="_blank" href=' . $acfJson . '>このデータ</a>をインポートしてください！';
 ?>
     <div class="notice my_acf_admin_notice">
@@ -22,7 +22,7 @@ function napcom_cpt_notice()
 
 function napcom_tax_notice()
 {
-    $taxJson = "https://github.com/sasigume/napcom2021/blob/master/cpt/cpt-export-2020-12-31.json";
+    $taxJson = "https://github.com/imaicu/napoancom-wp/blob/master/cpt/cpt-export-2020-12-31.json";
     $notice = 'ゲームの情報が出ない場合は「CPT UI」をインストールして、 <a noftarget="_blank" href=' . $taxJson . '>このデータ</a>をインポートしてください！';
 ?>
     <div class="notice napcom_first_notice">
